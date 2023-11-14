@@ -1,0 +1,211 @@
+@media (prefers-reduced-motion: no-preference) {
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        scroll-padding: 0;
+    }
+
+    section {
+        scroll-snap-align: start;
+        scroll-margin: 0;
+    }
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size-adjust: inherit;
+}
+
+html,
+body {
+    /* position: relative; */
+}
+
+section {
+    background: #0f0f0f;
+    color: #e6f2f7;
+    min-height: 100vh;
+    padding-top: 3.5em;
+    /* padding: 2.5em; */
+}
+
+section>* {
+    max-width: 40em;
+    margin: 0.5em auto;
+}
+
+.section-title {
+    font-size: 2.5em;
+}
+
+.section-content ul li {
+    padding: 0.25em;
+}
+
+.twocolumns {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.twocolumns td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.first {
+    text-align: center;
+    vertical-align: top;
+}
+
+section h2 {
+    font-size: 4em;
+    text-align: center;
+    line-height: 2rem;
+    -webkit-backface-visibility: hidden;
+}
+
+section section p {
+    font-size: 1.35em;
+    text-align: justify;
+    -webkit-backface-visibility: hidden;
+}
+
+.navigation {
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    right: 30px;
+}
+
+.navigation ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.navigation ul li ::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navigation ul li :hover::after {
+    width: 100%;
+}
+
+
+/* Colored sections */
+
+/* Landingpage */
+
+.part {
+    width: 100%;
+    height: 100vh;
+}
+
+#part_1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("./pic/pexels-harrison-haines-2869565.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#quote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    font-size: 1em;
+    position: relative;
+    top: 20%;
+    /* transform: translateY(-90%); */
+    /* margin-left: auto;
+    margin-right: 0; */
+}
+
+#part_1 img {
+    float: left;
+    margin-left: 1em;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+/* Skills */
+#part_2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("./pic/pexels-markus-spiske-360591.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Projects */
+#part_3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("./pic/pexels-markus-winkler-12081252.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Education */
+#part_4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("./pic/pexels-dids-2714073.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact */
+#part_5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("./pic/pexels-pixabay-326576.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#part_5 input {
+    width: 100%;
+    padding: 0.25em 0 0.25em 0;
+    border: 0;
+    margin: 0.5em 0 0.5em 0;
+    height: 2em;
+}
+
+#part_5 #longtext {
+    height: 6em;
+}
+
+#part_5 button {
+    width: 100%;
+    height: 2em;
+}
+
+@media screen and (max-width: 32em) {
+    section h2 {
+        font-size: 2em;
+    }
+
+    section p {
+        width: 90%;
+        left: 5%;
+        margin-top: 0;
+    }
+}
