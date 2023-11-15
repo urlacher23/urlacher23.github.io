@@ -189,7 +189,18 @@ section section p {
     height: 2em;
 }
 
+#part_5 textarea {
+    width: 100%;
+    padding: 0.25em 0 0.25em 0;
+    border: 0;
+    margin: 0.5em 0 0.5em 0;
+    height: 2em;
+}
+
+
+
 #part_5 #longtext {
+
     height: 6em;
 }
 
