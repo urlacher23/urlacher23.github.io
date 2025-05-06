@@ -1,0 +1,627 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyRider | Ultralight e-MTB for Active Families</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(16,185,129,0.1) 100%);
+        }
+        
+        .bike-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-bolt text-accent text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-primary">SkyRider</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#models" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition">Models</a>
+                        <a href="#features" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition">Features</a>
+                        <a href="#family" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition">Family Adventures</a>
+                        <a href="#testimonials" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition">Stories</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-dark hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#models" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition">Models</a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition">Features</a>
+                <a href="#family" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition">Family Adventures</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition">Stories</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:text-primary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Ride Further, <span class="text-primary">Together</span></h1>
+                    <p class="text-lg mb-8 text-gray-600">Ultralight e-Mountain Bikes designed for active families who crave adventure without limits. Explore more trails with less effort and more joy.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#models" class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 text-center">Explore Models</a>
+                        <a href="#family" class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-6 rounded-lg border border-primary transition duration-300 text-center">Family Adventures</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Family riding e-MTBs" class="rounded-xl shadow-xl w-full h-auto">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-accent rounded-full p-2 mr-3">
+                                <i class="fas fa-bolt text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">Ultralight Frame</p>
+                                <p class="text-xs text-gray-500">Only 15.8 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Models Section -->
+    <section id="models" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Find Your Perfect <span class="text-primary">SkyRider</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Our ultralight e-MTBs are designed for all-mountain performance with family-friendly features.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Model 1 - Parent -->
+                <div class="bike-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="SkyRider Pro" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded">BEST FOR PARENTS</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">SkyRider Pro</h3>
+                        <p class="text-gray-600 mb-4">The ultimate all-mountain e-bike for adventurous parents.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-sm text-gray-500">Weight</span>
+                                <p class="font-medium">15.8 kg</p>
+                            </div>
+                            <div>
+                                <span class="text-sm text-gray-500">Range</span>
+                                <p class="font-medium">120 km</p>
+                            </div>
+                            <div>
+                                <span class="text-sm text-gray-500">Motor</span>
+                                <p class="font-medium">350W</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$4,999</span>
+                            <button class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Configure</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 2 - Teen -->
+                <div class="bike-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1571068318100-8d936a97cd72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="SkyRider Youth" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">PERFECT FOR TEENS</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">SkyRider Youth</h3>
+                        <p class="text-gray-600 mb-4">Designed specifically for growing riders aged 12-16.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-sm text-gray-500">Weight</span>
+                                <p class="font-medium">13.2 kg</p>
+                            </div>
+                            <div>
+                                <span class="text-sm text-gray-500">Range</span>
+                                <p class="font-medium">90 km</p>
+                            </div>
+                            <div>
+                                <span class="text-sm text-gray-500">Motor</span>
+                                <p class="font-medium">250W</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$3,499</span>
+                            <button class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Configure</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Model 3 - Family Package -->
+                <div class="bike-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1635&q=80" alt="SkyRider Family Pack" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-2 py-1 rounded">FAMILY PACKAGE</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Family Adventure Pack</h3>
+                        <p class="text-gray-600 mb-4">Two adult and two youth models with matching gear.</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-sm text-gray-500">Savings</span>
+                                <p class="font-medium">$1,500+</p>
+                            </div>
+                            <div>
+                                <span class="text-sm text-gray-500">Includes</span>
+                                <p class="font-medium">4 Bikes + Gear</p>
+                            </div>
+                            <div>
+                                <span class="text-sm text-gray-500">Support</span>
+                                <p class="font-medium">5 Years</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$14,999</span>
+                            <button class="bg-primary hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Engineered for <span class="text-primary">Family Adventures</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Our ultralight e-MTBs combine cutting-edge technology with family-friendly features.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="feature-icon bg-primary bg-opacity-10 text-primary mb-4">
+                        <i class="fas fa-weight-hanging text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Ultralight Design</h3>
+                    <p class="text-gray-600 text-center">At just 15.8kg, our carbon fiber frames make loading bikes onto racks effortless and handling trails a breeze for riders of all skill levels.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="feature-icon bg-secondary bg-opacity-10 text-secondary mb-4">
+                        <i class="fas fa-battery-three-quarters text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Extended Range</h3>
+                    <p class="text-gray-600 text-center">With up to 120km range, families can explore further together without worrying about running out of power on the way home.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="feature-icon bg-accent bg-opacity-10 text-accent mb-4">
+                        <i class="fas fa-child text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Youth-Specific Models</h3>
+                    <p class="text-gray-600 text-center">Our youth models feature adjustable components that grow with your child, ensuring a perfect fit from ages 12 through 16.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="feature-icon bg-primary bg-opacity-10 text-primary mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Family Safety</h3>
+                    <p class="text-gray-600 text-center">Integrated GPS tracking, emergency alerts, and group ride modes keep your family connected and safe on every adventure.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="feature-icon bg-secondary bg-opacity-10 text-secondary mb-4">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Easy Maintenance</h3>
+                    <p class="text-gray-600 text-center">Our modular design and online tutorials make basic maintenance simple, saving you time and money on shop visits.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="feature-icon bg-accent bg-opacity-10 text-accent mb-4">
+                        <i class="fas fa-route text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Adventure Planner</h3>
+                    <p class="text-gray-600 text-center">Access our exclusive app with curated family-friendly trails, difficulty ratings, and points of interest along the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Family Adventures Section -->
+    <section id="family" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center gap-12">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Family biking adventure" class="rounded-xl shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">Create Lasting <span class="text-primary">Family Memories</span></h2>
+                    <p class="text-gray-600 mb-6">Our e-MTBs bridge the gap between parents and teens, allowing your whole family to enjoy mountain biking together regardless of fitness levels or experience.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-mountain text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Explore New Trails Together</h4>
+                                <p class="text-gray-600">With electric assist, technical trails become accessible to all family members, creating shared accomplishments.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-heart text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Healthy Family Bonding</h4>
+                                <p class="text-gray-600">Combine exercise with quality time away from screens in nature's playground.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-accent bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-graduation-cap text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Teach Valuable Skills</h4>
+                                <p class="text-gray-600">Help your teens develop confidence, mechanical skills, and environmental appreciation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-flex items-center text-primary font-medium">
+                            Plan Your Family Adventure
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Real <span class="text-primary">Family Stories</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Hear from families who've transformed their weekends with SkyRider e-MTBs.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah K." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah K.</h4>
+                            <p class="text-sm text-gray-500">Mother of two, Portland</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"After years of struggling to keep up with my teenage boys on trails, our SkyRiders have completely changed our family dynamics. Now we ride together every weekend!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mark T." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Mark T.</h4>
+                            <p class="text-sm text-gray-500">Father, Denver</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The ultralight design means I can easily load all four bikes onto our rack. The range is incredible - we did a 50km ride last Sunday and still had 40% battery left."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Lisa & Family" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Lisa & Family</h4>
+                            <p class="text-sm text-gray-500">Family of four, Bend</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"We bought the family package and couldn't be happier. The youth model adjusts perfectly as our kids grow, and the safety features give us peace of mind."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center text-primary font-medium">
+                    Read more family stories
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready for Your Family's Next Adventure?</h2>
+            <p class="max-w-2xl mx-auto mb-8 opacity-90">Join thousands of families discovering the joy of e-mountain biking together.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#models" class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-6 rounded-lg transition duration-300">Shop Bikes</a>
+                <a href="#contact" class="bg-primary border border-white hover:bg-primary-dark font-medium py-3 px-6 rounded-lg transition duration-300">Book a Test Ride</a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">Get in <span class="text-primary">Touch</span></h2>
+                    <p class="text-gray-600 mb-8">Have questions about which model is right for your family? Our experts are here to help.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Visit Us</h4>
+                                <p class="text-gray-600">123 Adventure Lane, Boulder, CO 80301</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Call Us</h4>
+                                <p class="text-gray-600">(800) 555-ADVENTURE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Us</h4>
+                                <p class="text-gray-600">family@skyridermtb.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Our Adventures</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full text-gray-700 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full text-gray-700 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-gray-200 p-3 rounded-full text-gray-700 transition duration-300">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold mb-6">Send Us a Message</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="family" class="block text-sm font-medium text-gray-700 mb-1">Family Details</label>
+                            <select id="family" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                                <option value="">Select your family situation</option>
+                                <option value="2a">2 Adults</option>
+                                <option value="2a1c">2 Adults + 1 Child</option>
+                                <option value="2a2c">2 Adults + 2 Children</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-bolt text-accent text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">SkyRider</span>
+                    </div>
+                    <p class="text-gray-400">Ultralight e-Mountain Bikes for active families who love adventure.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Shop</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Adult Bikes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Youth Bikes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Family Packages</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Manual & Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Warranty</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shipping Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 SkyRider e-MTB. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Simple form submission handler
+        const contactForm = document.querySelector('form');
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! Our family biking experts will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
+
+
